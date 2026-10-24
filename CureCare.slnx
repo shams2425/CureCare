@@ -1,1 +1,13 @@
-<Solution />
+<Solution>
+  <Folder Name="/BakendServices/" />
+  <Folder Name="/BakendServices/AuthService/">
+    <Project Path="BackendServices/AuthService/AuthService.API/AuthService.API.csproj" />
+    <Project Path="BackendServices/AuthService/AuthService.BusinessLogicLayer/AuthService.BusinessLogicLayer.csproj" />
+    <Project Path="BackendServices/AuthService/AuthService.DataAccessLayer/AuthService.DataAccessLayer.csproj" />
+  </Folder>
+  <Folder Name="/BakendServices/PatientService/">
+    <Project Path="BackendServices/PatientService/PatientService.API/PatientService.API.csproj" />
+    <Project Path="BackendServices/PatientService/PatientService.BusinessLogicLayer/PatientService.BusinessLogicLayer.csproj" />
+    <Project Path="BackendServices/PatientService/PatientService.DataAccessLayer/PatientService.DataAccessLayer.csproj" />
+  </Folder>
+</Solution>

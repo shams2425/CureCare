@@ -12,9 +12,10 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-  </ItemGroup>
+	  <PackageReference Include="Swashbuckle.AspNetCore" Version="10.3.1" />  </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\PatientService.BusinessLogicLayer\PatientService.BusinessLogicLayer.csproj" />
     <ProjectReference Include="..\PatientService.DataAccessLayer\PatientService.DataAccessLayer.csproj" />
   </ItemGroup>
 
