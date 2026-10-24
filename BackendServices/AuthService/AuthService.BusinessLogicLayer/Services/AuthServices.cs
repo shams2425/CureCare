@@ -22,7 +22,7 @@ public class AuthServices : IAuthServices
     }
 
     public async Task LoginAsync(LoginRequestDto loginRequestDto)
-    {
+    { 
         User? user = await _userRepository.GetByEmailAsync(loginRequestDto.Email);
 
         // Reject the login if the email is not registered.
