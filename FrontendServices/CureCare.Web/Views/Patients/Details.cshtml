@@ -1,0 +1,49 @@
+﻿@model CureCare.Web.Models.PatientResponseViewModel
+
+@{
+    ViewData["Title"] = "Patient Details";
+}
+
+<div class="container py-4">
+    <h1>Patient Details</h1>
+
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-3">Patient ID</dt>
+                <dd class="col-sm-9">@Model.Id</dd>
+
+                <dt class="col-sm-3">Full Name</dt>
+                <dd class="col-sm-9">@Model.FullName</dd>
+
+                <dt class="col-sm-3">Date of Birth</dt>
+                <dd class="col-sm-9">@Model.DateOfBirth.ToString("dd-MM-yyyy")</dd>
+
+                <dt class="col-sm-3">Gender</dt>
+                <dd class="col-sm-9">@Model.Gender</dd>
+
+                <dt class="col-sm-3">Blood Group</dt>
+                <dd class="col-sm-9">@(Model.BloodGroup ?? "Not provided")</dd>
+
+                <dt class="col-sm-3">Phone Number</dt>
+                <dd class="col-sm-9">@Model.PhoneNumber</dd>
+
+                <dt class="col-sm-3">Address</dt>
+                <dd class="col-sm-9">@(Model.Address ?? "Not provided")</dd>
+
+                <dt class="col-sm-3">Created At</dt>
+                <dd class="col-sm-9">@Model.CreatedAt.ToString("dd-MM-yyyy HH:mm")</dd>
+
+                <dt class="col-sm-3">Updated At</dt>
+                <dd class="col-sm-9">
+                    @(Model.UpdatedAt?.ToString("dd-MM-yyyy HH:mm") ?? "Not updated")
+                </dd>
+            </dl>
+
+            <a asp-action="Edit" asp-route-id="@Model.Id"
+               class="btn btn-warning">Edit</a>
+
+            <a asp-action="Index" class="btn btn-secondary">Back to Patients</a>
+        </div>
+    </div>
+</div>

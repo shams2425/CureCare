@@ -1,0 +1,754 @@
+/* General page styling */
+body {
+    background-color: #f4f7fb;
+    color: #263238;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Main navigation bar */
+.navbar {
+    background: linear-gradient(90deg, #087f8c, #075985);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff !important;
+}
+
+.navbar .nav-link {
+    color: #ffffff !important;
+    font-weight: 500;
+    margin-left: 10px;
+    transition: color 0.2s ease;
+}
+
+    .navbar .nav-link:hover {
+        color: #d1f5ff !important;
+    }
+
+/* Main content area */
+main.container {
+    min-height: calc(100vh - 140px);
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
+/* Common cards */
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+/* Primary buttons */
+.btn-primary {
+    background-color: #087f8c;
+    border-color: #087f8c;
+}
+
+    .btn-primary:hover,
+    .btn-primary:focus {
+        background-color: #066873;
+        border-color: #066873;
+    }
+
+/* Footer */
+.page-footer {
+    background-color: #ffffff;
+    border-top: 1px solid #e5e7eb;
+    padding: 16px 0;
+    text-align: center;
+    color: #64748b;
+}
+
+/* Form validation messages */
+.field-validation-error,
+.validation-summary-errors {
+    color: #dc3545;
+}
+
+.input-validation-error {
+    border-color: #dc3545;
+}
+
+/* Responsive navigation spacing */
+@media (max-width: 991px) {
+    .navbar .nav-link {
+        margin-left: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+
+
+/* Patient table action icons */
+.patient-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.action-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.view-icon {
+    color: #0284c7;
+    background-color: #e0f2fe;
+}
+
+    .view-icon:hover {
+        color: #ffffff;
+        background-color: #0284c7;
+    }
+
+.edit-icon {
+    color: #b45309;
+    background-color: #fef3c7;
+}
+
+    .edit-icon:hover {
+        color: #ffffff;
+        background-color: #b45309;
+    }
+
+.delete-icon {
+    color: #dc2626;
+    background-color: #fee2e2;
+}
+
+    .delete-icon:hover {
+        color: #ffffff;
+        background-color: #dc2626;
+    }
+
+.action-icon:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+}
+
+
+
+
+/* ==============================
+   CureCare Dashboard
+   ============================== */
+
+.dashboard-page {
+    padding: 24px 0 40px;
+}
+
+.dashboard-hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    overflow: hidden;
+    padding: 44px 48px;
+    margin-bottom: 38px;
+    color: #ffffff;
+    background: linear-gradient(120deg, #087f8c, #075985);
+    border-radius: 18px;
+    box-shadow: 0 12px 28px rgba(7, 89, 133, 0.16);
+}
+
+.dashboard-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 650px;
+}
+
+.dashboard-eyebrow {
+    display: inline-block;
+    margin-bottom: 14px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #c9f5f5;
+}
+
+.dashboard-hero h1 {
+    margin-bottom: 14px;
+    font-size: clamp(30px, 4vw, 44px);
+    font-weight: 750;
+    letter-spacing: -1px;
+}
+
+.dashboard-hero p {
+    max-width: 560px;
+    margin-bottom: 25px;
+    color: #e0f7fa;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.dashboard-primary-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 20px;
+    color: #075985;
+    background: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 9px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+    .dashboard-primary-btn:hover {
+        color: #075985;
+        background: #f0fdff;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+        transform: translateY(-2px);
+    }
+
+.dashboard-hero-icon {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 160px;
+    color: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 28px;
+}
+
+.dashboard-section {
+    margin-bottom: 32px;
+}
+
+.dashboard-section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+    .dashboard-section-heading h2 {
+        margin-bottom: 7px;
+        color: #183b4e;
+        font-size: 25px;
+        font-weight: 750;
+    }
+
+    .dashboard-section-heading p {
+        margin-bottom: 0;
+        color: #64748b;
+        font-size: 14px;
+    }
+
+.dashboard-action-card {
+    height: 100%;
+    padding: 30px;
+    background: #ffffff;
+    border: 1px solid #e7edf3;
+    border-radius: 15px;
+    box-shadow: 0 5px 18px rgba(15, 23, 42, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+    .dashboard-action-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 28px rgba(15, 23, 42, 0.09);
+    }
+
+.dashboard-card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 22px;
+    border-radius: 14px;
+}
+
+.patients-card-icon {
+    color: #087f8c;
+    background: #e5f7f8;
+}
+
+.register-card-icon {
+    color: #15803d;
+    background: #dcfce7;
+}
+
+.dashboard-action-card h3 {
+    margin-bottom: 12px;
+    color: #183b4e;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.dashboard-action-card p {
+    min-height: 52px;
+    margin-bottom: 22px;
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.dashboard-card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #087f8c;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+    .dashboard-card-link span {
+        font-size: 20px;
+        transition: transform 0.2s ease;
+    }
+
+    .dashboard-card-link:hover {
+        color: #075985;
+    }
+
+        .dashboard-card-link:hover span {
+            transform: translateX(4px);
+        }
+
+    .dashboard-card-link.register-link {
+        color: #15803d;
+    }
+
+        .dashboard-card-link.register-link:hover {
+            color: #166534;
+        }
+
+.dashboard-info-banner {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 22px 24px;
+    background: #edf8fc;
+    border: 1px solid #d5edf7;
+    border-radius: 13px;
+}
+
+.dashboard-info-icon {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    color: #087f8c;
+    background: #ffffff;
+    border-radius: 11px;
+}
+
+.dashboard-info-banner h3 {
+    margin: 2px 0 7px;
+    color: #164e63;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.dashboard-info-banner p {
+    margin-bottom: 0;
+    color: #476575;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* Responsive layout for tablets and mobile screens */
+
+@media (max-width: 767px) {
+    .dashboard-page {
+        padding-top: 16px;
+    }
+
+    .dashboard-hero {
+        padding: 30px 24px;
+        margin-bottom: 30px;
+        border-radius: 14px;
+    }
+
+        .dashboard-hero h1 {
+            font-size: 31px;
+        }
+
+        .dashboard-hero p {
+            font-size: 14px;
+        }
+
+    .dashboard-hero-icon {
+        display: none;
+    }
+
+    .dashboard-action-card {
+        padding: 24px;
+    }
+
+        .dashboard-action-card p {
+            min-height: auto;
+        }
+
+    .dashboard-info-banner {
+        padding: 18px;
+    }
+}
+
+@media (max-width: 400px) {
+    .dashboard-hero {
+        padding: 25px 19px;
+    }
+
+        .dashboard-hero h1 {
+            font-size: 27px;
+        }
+
+    .dashboard-section-heading h2 {
+        font-size: 22px;
+    }
+}
+
+
+
+/* ==============================
+   CureCare Navigation Bar
+   ============================== */
+
+.curecare-navbar {
+    min-height: 76px;
+    padding: 10px 0;
+    background: linear-gradient(100deg, #087f8c, #075985);
+    box-shadow: 0 4px 14px rgba(7, 89, 133, 0.12);
+}
+
+.curecare-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #ffffff !important;
+    font-size: 25px;
+    font-weight: 750;
+    letter-spacing: -0.5px;
+    text-decoration: none;
+}
+
+.brand-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    color: #087f8c;
+    background: #ffffff;
+    border-radius: 12px;
+}
+
+.curecare-nav-links {
+    align-items: center;
+    gap: 10px;
+}
+
+    .curecare-nav-links .nav-link {
+        padding: 11px 18px !important;
+        color: #e7f8fb !important;
+        border-radius: 9px;
+        font-size: 15px;
+        font-weight: 600;
+        transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+        .curecare-nav-links .nav-link:hover,
+        .curecare-nav-links .nav-link:focus {
+            color: #ffffff !important;
+            background: rgba(255, 255, 255, 0.14);
+        }
+
+.curecare-toggler {
+    padding: 7px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+    .curecare-toggler:focus {
+        box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2);
+    }
+
+@media (max-width: 991px) {
+    .curecare-nav-links {
+        align-items: stretch;
+        gap: 4px;
+        padding-top: 12px;
+    }
+
+        .curecare-nav-links .nav-link {
+            padding: 12px 14px !important;
+        }
+}
+
+
+
+
+/* =========================================
+   CureCare - Shared UI Polish
+   ========================================= */
+
+:root {
+    --cc-primary: #087f8c;
+    --cc-primary-dark: #075985;
+    --cc-text: #183b4e;
+    --cc-muted: #64748b;
+    --cc-border: #e2e8f0;
+    --cc-page-bg: #f4f7fb;
+    --cc-card-bg: #ffffff;
+}
+
+body {
+    color: var(--cc-text);
+    background: var(--cc-page-bg);
+    font-family: "Segoe UI", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+main.container {
+    width: 100%;
+    max-width: 1240px;
+    min-height: calc(100vh - 150px);
+    padding: 32px 24px 48px;
+}
+
+h1, h2, h3, h4, h5 {
+    color: var(--cc-text);
+    letter-spacing: -0.3px;
+}
+
+p {
+    line-height: 1.7;
+}
+
+.text-muted {
+    color: var(--cc-muted) !important;
+}
+
+/* Cards and form containers */
+
+.card {
+    overflow: hidden;
+    background: var(--cc-card-bg);
+    border: 1px solid var(--cc-border);
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(15, 23, 42, 0.045) !important;
+}
+
+.card-body {
+    padding: 26px;
+}
+
+.card-title {
+    font-weight: 700;
+}
+
+/* Form labels and inputs */
+
+.form-label,
+label {
+    color: #334155;
+    font-weight: 600;
+}
+
+.form-control,
+.form-select {
+    min-height: 44px;
+    color: #1e293b;
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+textarea.form-control {
+    min-height: 100px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--cc-primary);
+    box-shadow: 0 0 0 3px rgba(8, 127, 140, 0.12);
+}
+
+.form-control::placeholder {
+    color: #94a3b8;
+}
+
+.input-validation-error {
+    border-color: #dc2626 !important;
+    background-color: #fffafa;
+}
+
+.field-validation-error,
+.validation-summary-errors {
+    display: block;
+    margin-top: 5px;
+    color: #dc2626;
+    font-size: 13px;
+}
+
+    .validation-summary-errors ul {
+        margin-bottom: 0;
+        padding-left: 20px;
+    }
+
+/* Consistent buttons */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    min-height: 40px;
+    padding: 9px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-primary {
+    color: #ffffff;
+    background-color: var(--cc-primary);
+    border-color: var(--cc-primary);
+}
+
+    .btn-primary:hover,
+    .btn-primary:focus {
+        color: #ffffff;
+        background-color: #066873;
+        border-color: #066873;
+    }
+
+.btn-success {
+    color: #ffffff;
+    background-color: #15803d;
+    border-color: #15803d;
+}
+
+.btn-danger {
+    color: #ffffff;
+    background-color: #dc2626;
+    border-color: #dc2626;
+}
+
+.btn-outline-secondary {
+    color: #475569;
+    border-color: #cbd5e1;
+}
+
+    .btn-outline-secondary:hover {
+        color: #1e293b;
+        background-color: #f1f5f9;
+        border-color: #94a3b8;
+    }
+
+/* Patient table */
+
+.table-responsive {
+    overflow-x: auto;
+    background: #ffffff;
+    border: 1px solid var(--cc-border);
+    border-radius: 12px;
+}
+
+.table {
+    margin-bottom: 0;
+    color: #334155;
+    vertical-align: middle;
+}
+
+    .table > thead > tr > th {
+        padding: 16px;
+        color: #475569;
+        background: #f1f7fa;
+        border-bottom: 1px solid var(--cc-border);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        white-space: nowrap;
+    }
+
+    .table > tbody > tr > td {
+        padding: 15px 16px;
+        border-color: #edf2f7;
+        font-size: 14px;
+    }
+
+.table-hover > tbody > tr:hover > * {
+    color: #183b4e;
+    background-color: #f6fbfd;
+}
+
+.table > tbody > tr:last-child > td {
+    border-bottom: 0;
+}
+
+/* Page spacing and links */
+
+.page-heading {
+    margin-bottom: 24px;
+}
+
+a {
+    transition: color 0.2s ease;
+}
+
+    a:focus-visible,
+    button:focus-visible {
+        outline: 2px solid var(--cc-primary);
+        outline-offset: 3px;
+    }
+
+/* Footer */
+
+.page-footer {
+    margin-top: 24px;
+    background: #ffffff;
+    border-top: 1px solid var(--cc-border);
+    color: var(--cc-muted);
+    font-size: 13px;
+}
+
+/* Responsive screens */
+
+@media (max-width: 767px) {
+    main.container {
+        padding: 22px 16px 32px;
+    }
+
+    .card-body {
+        padding: 20px;
+    }
+
+    .table > thead > tr > th,
+    .table > tbody > tr > td {
+        padding: 12px;
+    }
+
+    .btn {
+        max-width: 100%;
+    }
+}
+

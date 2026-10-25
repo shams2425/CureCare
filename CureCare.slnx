@@ -10,4 +10,7 @@
     <Project Path="BackendServices/PatientService/PatientService.BusinessLogicLayer/PatientService.BusinessLogicLayer.csproj" />
     <Project Path="BackendServices/PatientService/PatientService.DataAccessLayer/PatientService.DataAccessLayer.csproj" />
   </Folder>
+  <Folder Name="/FrontendServices/">
+    <Project Path="FrontendServices/CureCare.Web/CureCare.Web.csproj" Id="9217fb5e-29f6-488e-8ec3-8944a67056c5" />
+  </Folder>
 </Solution>

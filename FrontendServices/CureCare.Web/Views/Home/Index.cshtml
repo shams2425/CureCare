@@ -1,0 +1,108 @@
+﻿
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="dashboard-page">
+
+    <!-- Welcome Banner -->
+    <section class="dashboard-hero">
+        <div class="dashboard-hero-content">
+            <span class="dashboard-eyebrow">HOSPITAL MANAGEMENT SYSTEM</span>
+
+            <h1>Welcome to CureCare</h1>
+
+            <p>
+                Manage patient information and keep hospital records
+                organized in one place.
+            </p>
+
+            <a asp-controller="Patients"
+               asp-action="Create"
+               class="dashboard-primary-btn">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     width="20" height="20" viewBox="0 0 24 24"
+                     fill="none" stroke="currentColor"
+                     stroke-width="2" stroke-linecap="round"
+                     stroke-linejoin="round" aria-hidden="true">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                    <circle cx="10" cy="7" r="4" />
+                    <path d="M20 8v6M23 11h-6" />
+                </svg>
+                Register New Patient
+            </a>
+        </div>
+
+        <div class="dashboard-hero-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 width="112" height="112" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor"
+                 stroke-width="1.2" stroke-linecap="round"
+                 stroke-linejoin="round">
+                <path d="M8 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-3" />
+                <rect x="8" y="2" width="8" height="4" rx="1" />
+                <path d="M12 11v6M9 14h6" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- Dashboard Introduction -->
+    <section class="dashboard-section">
+        <div class="dashboard-section-heading">
+            <div>
+                <h2>Patient Management</h2>
+                <p>
+                    Keep patient records organized and manage
+                    information efficiently.
+                </p>
+            </div>
+        </div>
+
+        <div class="dashboard-action-card dashboard-intro-card">
+            <div class="dashboard-card-icon patients-card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     width="30" height="30" viewBox="0 0 24 24"
+                     fill="none" stroke="currentColor"
+                     stroke-width="1.8" stroke-linecap="round"
+                     stroke-linejoin="round" aria-hidden="true">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                    <circle cx="10" cy="7" r="4" />
+                    <path d="M20 8v6M23 11h-6" />
+                </svg>
+            </div>
+
+            <h3>Everything in One Place</h3>
+
+            <p>
+                CureCare helps you maintain patient information
+                through the patient management section. You can
+                view records, check patient details, update
+                information and remove records when required.
+            </p>
+        </div>
+    </section>
+
+    <!-- Information Banner -->
+    <section class="dashboard-info-banner">
+        <div class="dashboard-info-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 width="25" height="25" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round"
+                 stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 16v-4M12 8h.01" />
+            </svg>
+        </div>
+
+        <div>
+            <h3>Getting Started</h3>
+            <p>
+                To add a new patient, select Register New Patient.
+                To view or manage existing records, use View Patients
+                in the navigation menu.
+            </p>
+        </div>
+    </section>
+
+</div>

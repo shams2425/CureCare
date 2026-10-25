@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Patient API Error";
+}
+
+<div class="container py-5">
+    <div class="alert alert-danger">
+        <h1>Unable to Load Patients</h1>
+
+        <p>
+            The PatientService API could not be reached.
+            Make sure the API is running and the configured URL is correct.
+        </p>
+
+        <a asp-controller="Patients" asp-action="Index"
+           class="btn btn-primary">Try Again</a>
+    </div>
+</div>
