@@ -5,5 +5,7 @@ namespace AuthService.BusinessLogicLayer.ServiceContracts;
 public interface IAuthServices
 {
     Task RegisterAsync(RegisterRequestDto registerRequestDto);
-    Task LoginAsync(LoginRequestDto loginRequestDto);
+
+    Task<LoginResponseDto> LoginAsync(LoginRequestDto loginRequestDto);
+    Task RegisterAdminAsync(RegisterRequestDto registerRequestDto);
 }

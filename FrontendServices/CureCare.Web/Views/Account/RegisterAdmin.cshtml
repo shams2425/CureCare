@@ -1,0 +1,84 @@
+﻿
+@model RegisterViewModel
+
+@{
+    ViewData["Title"] = "Admin Registration";
+}
+
+<div class="cc-admin-signup">
+    <div class="cc-admin-signup-panel">
+
+        <div class="cc-admin-signup-top">
+            <div class="cc-admin-signup-logo">+</div>
+            <span>CURECARE HOSPITAL</span>
+        </div>
+
+        <h1>Create Admin Account</h1>
+        <p class="cc-admin-signup-subtitle">
+            Register to manage hospital operations.
+        </p>
+
+        <form asp-controller="Account"
+              asp-action="RegisterAdmin"
+              method="post"
+              id="adminRegisterForm">
+
+            @Html.AntiForgeryToken()
+
+            <div asp-validation-summary="ModelOnly"
+                 class="cc-admin-validation"></div>
+
+            <div class="cc-admin-field">
+                <label asp-for="FullName">Full Name</label>
+                <input asp-for="FullName"
+                       class="form-control"
+                       placeholder="Enter your full name"
+                       autocomplete="name" />
+                <span asp-validation-for="FullName"
+                      class="field-error"></span>
+            </div>
+
+            <div class="cc-admin-field">
+                <label asp-for="Email">Email Address</label>
+                <input asp-for="Email"
+                       class="form-control"
+                       placeholder="you@example.com"
+                       autocomplete="email" />
+                <span asp-validation-for="Email"
+                      class="field-error"></span>
+            </div>
+
+            <div class="cc-admin-field">
+                <label asp-for="Password">Password</label>
+                <input asp-for="Password"
+                       type="password"
+                       class="form-control"
+                       placeholder="Minimum 8 characters"
+                       autocomplete="new-password"
+                       id="adminPassword" />
+                <span asp-validation-for="Password"
+                      class="field-error"></span>
+            </div>
+
+            <button type="submit"
+                    class="cc-admin-signup-submit"
+                    id="adminRegisterButton">
+                Create Admin Account
+                <span aria-hidden="true">→</span>
+            </button>
+        </form>
+
+        <div class="cc-admin-signup-bottom">
+            <a asp-controller="Account" asp-action="Login">
+                Back to Login
+            </a>
+        </div>
+
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script src="~/js/account/register-admin.js"
+            asp-append-version="true"></script>
+}
