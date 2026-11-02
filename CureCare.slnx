@@ -5,6 +5,11 @@
     <Project Path="BackendServices/AuthService/AuthService.BusinessLogicLayer/AuthService.BusinessLogicLayer.csproj" />
     <Project Path="BackendServices/AuthService/AuthService.DataAccessLayer/AuthService.DataAccessLayer.csproj" />
   </Folder>
+  <Folder Name="/BakendServices/DoctorService/">
+    <Project Path="BackendServices/DoctorService/DoctorService.API/DoctorService.API.csproj" Id="85d939d5-2fc4-4033-8df2-a5abb77a0762" />
+    <Project Path="BackendServices/DoctorService/DoctorService.BusinessLogicLayer/DoctorService.BusinessLogicLayer.csproj" Id="9f7e22ae-0015-43ce-85d8-7fd854b75310" />
+    <Project Path="BackendServices/DoctorService/DoctorService.DataAccessLayer/DoctorService.DataAccessLayer.csproj" Id="1f2f1117-2d6e-4087-b853-438cf2228daf" />
+  </Folder>
   <Folder Name="/BakendServices/PatientService/">
     <Project Path="BackendServices/PatientService/PatientService.API/PatientService.API.csproj" />
     <Project Path="BackendServices/PatientService/PatientService.BusinessLogicLayer/PatientService.BusinessLogicLayer.csproj" />
